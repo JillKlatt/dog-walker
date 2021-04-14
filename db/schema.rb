@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_193759) do
   end
 
   create_table "routes", force: :cascade do |t|
-    t.integer "owner_id", null: false
+    t.integer "dog_id", null: false
     t.integer "walker_id", null: false
     t.text "schedule"
     t.string "location"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_193759) do
     t.boolean "paid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["owner_id"], name: "index_routes_on_owner_id"
+    t.index ["dog_id"], name: "index_routes_on_dog_id"
     t.index ["walker_id"], name: "index_routes_on_walker_id"
   end
 
@@ -56,6 +56,6 @@ ActiveRecord::Schema.define(version: 2021_04_07_193759) do
   end
 
   add_foreign_key "dogs", "owners"
-  add_foreign_key "routes", "owners"
+  add_foreign_key "routes", "dogs"
   add_foreign_key "routes", "walkers"
 end

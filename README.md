@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+#WIP
+- fix joins table 
+- routes 
+- controllers
+- views
