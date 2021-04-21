@@ -1,0 +1,7 @@
+
+<h1> All walkers </h1>
+
+<ul>
+<% @walkers.each do |walker| %>
+    <li><%= link_to walker.name, walker_path(walker)  %></li> 
+</ul>
